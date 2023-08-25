@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>love line with Mrs.Right</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<!-- <embed src="http://p3qhnc0eg.bkt.clouddn.com/U%20are%20so%20beautiful.mp3" width="0" height="0" loop="-1" autostart="true"> </embed> -->
+<embed src="http://other.web.ri01.sycdn.kuwo.cn/resource/n3/19/68/2405391895.mp3" width="0" height="0" loop="-1" autostart="true"> </embed>
+
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code" style="font-size: 18px;">
+			<span class="keyword">To 乔雨佳</span><br /><br />
+            你怎么这么好呢?</span><br />
+            <span class="keyword">我可真的太喜欢你了</span><br /><br />
+
+            在我的眼里<br />
+            <span class="keyword">似乎各种美丽女性的代名词</span><br />
+			都出现在你的身上<br /><br />
+            让我想想<br />
+            我的宝宝称呼有哪些呢？<br />
+			<span class="keyword">可爱,体贴宝,可爱宝,乔小宝,宝，宝子，宝儿...</span><br /><br />
+            咦，所有的赞美词不都是我宝宝的称呼吗？/偷笑<br />
+            
+            <hr />
+			
+   			<span class="keyword">I want to say:</span><br />
+			   <span class="keyword">  乔雨佳，</span><br />
+            <span class="keyword">  你是我的! </span><br />
+			    P.S.: I love you forever！<br />
+                -- From 史武杰<br />
+			    2023年8月22日<br />
+
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					相恋...
+					<div id="elapseClock"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+
+together.setFullYear(2022, 7, 24);//1.23；3.29 together.setFullYear(2023, 7, 20);：这行代码将 together 日期对象的年份、月份和日期设置为2023年8月20日。需要注意的是，在 JavaScript 中月份是从 0 开始计数的，所以数字 7 对应于八月。
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
